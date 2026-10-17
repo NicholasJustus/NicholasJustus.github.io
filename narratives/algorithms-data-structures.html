@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Enhancement Two: Algorithms and Data Structures | Nicholas Justus</title>
+<style>
+*{box-sizing:border-box}body{margin:0;font-family:Arial,sans-serif;line-height:1.7;color:#263238;background:#f4f6f8}header{background:#172b4d;color:white;padding:28px 20px;text-align:center}main{max-width:900px;margin:30px auto;padding:0 18px}article{background:white;padding:32px;border-radius:10px;box-shadow:0 2px 8px #0000000d}h1,h2,h3{line-height:1.3;color:#172b4d}h1{margin-top:0}a{color:#1759a6}.back{display:inline-block;margin-top:22px}@media(max-width:600px){article{padding:20px}}
+</style>
+</head>
+<body><header><strong>Nicholas Justus | CS 499 Computer Science Capstone</strong></header>
+<main><article>
+<h1>Enhancement Two: Algorithms and Data Structures</h1>
+      <p><strong>Nicholas Justus | CS 499 Computer Science Capstone</strong></p>
+      <h2>Artifact Description</h2>
+      <p>The artifact is the CS-300 Advising Assistance Program created for the Data Structures and Algorithms: Analysis and Design course. The program is a C++ course-management application that loads course information from a CSV file, stores the records in a hash table, sorts the courses for display, and allows the user to search for a specific course and view its prerequisites.</p>
+      <h2>Enhancement and Skills Demonstrated</h2>
+      <p>I included this artifact in my ePortfolio because it demonstrates my ability to select and work with data structures and algorithms rather than only focusing on basic program functionality. The original program used a hash table for course storage and lookup and sorting for the course list. For this enhancement, I added a sorted vector and a binary search algorithm so the program can compare two different approaches to course lookup. I also added a search comparison feature and a performance test that performs 100,000 search operations. The program reports the time-complexity characteristics of the approaches: average O(1) for hash-table lookup, O(log n) for binary search, and O(n log n) for sorting.</p>
+      <p>Testing showed that both search methods successfully found CSCI200. The performance test used eight loaded courses and 100,000 search operations. In that run, the hash-table search took 10,723 microseconds and the binary search took 26,299 microseconds. This result helped demonstrate that theoretical complexity and measured runtime are related but are not the same thing. The hash table was faster in this particular test, while binary search provided an additional search strategy that requires sorted data.</p>
+      <h2>Course Outcomes</h2>
+      <p>The enhancement addresses the course outcome involving designing and evaluating a computing solution using algorithmic principles while considering trade-offs between different search approaches. It also supports the outcome involving C++ data structures, algorithms, testing, and performance measurement to improve an existing computing solution.</p>
+      <h2>Reflection</h2>
+      <p>The main thing I learned from this enhancement was that choosing an algorithm involves more than simply selecting the algorithm with the smallest Big-O notation. The existing hash table already provided average constant-time lookup, so adding binary search gave me an opportunity to compare the strengths and requirements of two different approaches. I learned that binary search depends on sorted data and that the cost of sorting needs to be considered when evaluating the overall solution. I also gained more experience using performance testing to compare actual program behavior instead of relying only on theoretical analysis.</p>
+      <p>The main challenge was adding the new search method without breaking the existing program. I kept the original hash-table search in place and added the binary-search functionality separately, which allowed me to test both approaches. The final program built successfully with zero errors, loaded all eight courses, successfully found CSCI200 using both search methods, and completed the 100,000-operation performance test.</p>
+      <p><a href="https://github.com/NicholasJustus/Data-Structures-Algorithms-Analysis-and-Design" target="_blank" rel="noopener noreferrer">View the CS-300 project repository</a></p>
+<a class="back" href="../index.html">← Back to the ePortfolio</a>
+</article></main></body></html>
