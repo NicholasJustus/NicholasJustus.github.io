@@ -3,187 +3,148 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Nicholas Justus | Computer Science Portfolio</title>
+  <meta name="description" content="Nicholas Justus's Computer Science ePortfolio for CS 499, featuring software engineering, algorithms, databases, and professional growth.">
+  <title>Nicholas Justus | Computer Science ePortfolio</title>
   <style>
-    * { box-sizing: border-box; }
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      line-height: 1.7;
-      color: #263238;
-      background: #f4f6f8;
-    }
-    header {
-      background: #172b4d;
-      color: white;
-      padding: 48px 20px;
-      text-align: center;
-    }
-    header h1 { margin: 0; font-size: 2.3rem; }
-    header p { margin-bottom: 0; color: #dce6f2; }
-    nav {
-      background: #243b60;
-      padding: 12px;
-      text-align: center;
-      position: sticky;
-      top: 0;
-    }
-    nav a {
-      color: white;
-      text-decoration: none;
-      margin: 0 12px;
-      font-weight: bold;
-    }
-    main { max-width: 950px; margin: 30px auto; padding: 0 18px; }
-    section {
-      background: white;
-      margin-bottom: 24px;
-      padding: 28px;
-      border-radius: 10px;
-      box-shadow: 0 2px 8px #0000000d;
-    }
-    h2 { color: #172b4d; margin-top: 0; }
-    h3 { color: #304d75; }
-    a { color: #1759a6; }
-    .links a { margin-right: 16px; }
-    footer { text-align: center; padding: 24px; color: #657080; }
-    @media (max-width: 600px) {
-      nav a { display: inline-block; margin: 5px; }
-      header h1 { font-size: 1.8rem; }
-      section { padding: 20px; }
-    }
+    :root { --navy:#172b4d; --blue:#243b60; --ink:#263238; --muted:#586779; --paper:#fff; --bg:#f3f6fa; --line:#dce4ed; --accent:#1764ad; }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { margin:0; font-family:Arial,Helvetica,sans-serif; line-height:1.7; color:var(--ink); background:var(--bg); }
+    header { padding:58px 20px 46px; text-align:center; color:#fff; background:linear-gradient(135deg,var(--navy),#315783); }
+    header h1 { margin:0; font-size:clamp(2rem,5vw,3rem); letter-spacing:-.03em; }
+    header p { margin:8px 0 0; color:#e1eaf5; }
+    nav { position:sticky; top:0; z-index:5; background:var(--blue); padding:12px 10px; text-align:center; box-shadow:0 2px 8px #0e23331c; }
+    nav a { display:inline-block; color:#fff; text-decoration:none; font-weight:600; margin:4px 10px; font-size:.95rem; }
+    nav a:hover, nav a:focus { text-decoration:underline; }
+    main { width:min(100% - 32px,980px); margin:32px auto; }
+    section { background:var(--paper); padding:clamp(22px,4vw,36px); margin-bottom:24px; border:1px solid var(--line); border-radius:14px; box-shadow:0 4px 18px #172b4d0a; scroll-margin-top:90px; }
+    h2 { color:var(--navy); margin:0 0 16px; font-size:1.7rem; line-height:1.3; }
+    h3 { color:var(--blue); margin:24px 0 8px; font-size:1.15rem; }
+    p { margin:0 0 14px; }
+    p:last-child { margin-bottom:0; }
+    a { color:var(--accent); }
+    .intro { font-size:1.05rem; color:#34485d; }
+    .pill { display:inline-block; background:#eaf1f8; color:var(--navy); border-radius:999px; padding:4px 11px; margin:0 6px 8px 0; font-size:.85rem; font-weight:600; }
+    .links { display:flex; flex-wrap:wrap; gap:10px; margin-top:18px; }
+    .links a { display:inline-block; border:1px solid #c7d5e5; padding:8px 12px; border-radius:8px; text-decoration:none; font-weight:600; }
+    .links a:hover { background:#edf4fb; }
+    .project { border-top:1px solid var(--line); padding-top:18px; margin-top:18px; }
+    .project:first-of-type { border-top:0; padding-top:0; margin-top:0; }
+    details { border:1px solid var(--line); border-radius:9px; padding:12px 14px; margin-top:14px; }
+    summary { cursor:pointer; color:var(--blue); font-weight:700; }
+    details p { margin-top:12px; }
+    .notice { background:#f7f9fc; border-left:4px solid #6f8fb3; padding:12px 15px; border-radius:4px; color:#42566b; }
+    footer { text-align:center; padding:20px; color:var(--muted); font-size:.9rem; }
+    @media(max-width:600px) { nav a { margin:4px 6px; font-size:.88rem; } section { padding:21px; } }
   </style>
 </head>
 <body>
   <header>
     <h1>Nicholas Justus</h1>
-    <p>Computer Science | Software Engineering | Independent Game Development</p>
+    <p>Computer Science · Software Engineering · Independent Game Development</p>
   </header>
-
-  <nav>
+  <nav aria-label="Main navigation">
     <a href="#about">Self-Assessment</a>
     <a href="#review">Code Review</a>
     <a href="#software">Software Engineering</a>
     <a href="#algorithms">Algorithms</a>
     <a href="#databases">Databases</a>
   </nav>
-
   <main>
     <section id="about">
       <h2>Professional Self-Assessment</h2>
-      <p>
-        Completing my Computer Science degree has helped me become more confident
-        in learning technical concepts, solving problems, and turning ideas into
-        working software. I have learned that development involves more than
-        writing code that runs. It also requires testing, communication, careful
-        decisions, and responsibility for the results.
-      </p>
-      <p>
-        My software engineering internship in the aerospace industry has given me
-        experience with Python scripts, firmware testing, automated tests, log
-        analysis, and development workflows. This work has shown me how important
-        reliability, teamwork, and clear results are when software supports
-        complex systems.
-      </p>
-      <p>
-        I also started Sunday Drive Games to continue developing games and growing
-        my programming and creative skills. Building games has helped me combine
-        programming, design, debugging, and feedback. My long-term goal is to
-        continue growing as a software developer while building my independent
-        game development work and maintaining time for my family.
-      </p>
+      <p class="intro">My Computer Science degree has helped me become more confident in learning technical concepts, working through problems, and turning ideas into working software. I have learned that development is not just about writing code that runs. It also means understanding the problem, choosing an appropriate approach, testing carefully, communicating decisions, and making changes without creating new problems. I learn best by building things and seeing how the pieces work together, so hands-on projects have been especially valuable to me.</p>
+      <p>My software engineering internship in the aerospace industry has allowed me to apply these skills in a professional setting. My work has included Python scripts, firmware testing, automated tests, log analysis, and tasks connected to development and continuous integration. This experience has shown me how important reliability, clear results, and teamwork are when software supports complex systems. It has also taught me to investigate issues methodically and make my work useful to teammates, not just get it working on my own machine.</p>
+      <p>Outside of my internship, I started Sunday Drive Games to keep developing games and improving my programming and creative skills. Building and releasing small games has required me to combine programming, design, debugging, art, and feedback. I enjoy the full process of creating a game, from the first idea to a playable result. My long-term goal is to continue growing as a software developer while building my independent game development work. I also value maintaining a healthy balance and making time for my family.</p>
       <h3>Collaboration and Communication</h3>
-      <p>
-        My internship and game projects have taught me to consider other people's
-        perspectives, explain my decisions, and use feedback to improve my work.
-        Through code reviews, documentation, and this portfolio, I have practiced
-        explaining not only what I changed, but why I changed it.
-      </p>
+      <p>My internship has shown me that software work is rarely done in isolation. Tests, scripts, and analysis are more useful when teammates can understand the results and apply them to their own work. My game projects have also taught me to seek feedback and consider how another person experiences what I have built. Through coursework, code reviews, documentation, and this portfolio, I have practiced explaining not only what I changed, but why I changed it.</p>
       <h3>Algorithms and Computing Practices</h3>
-      <p>
-        My CS-300 Advising Assistance Program demonstrates how data structures
-        and algorithms affect a solution. I added binary search alongside
-        hash-table searching and compared their behavior through performance
-        testing. This helped me understand the trade-offs between approaches and
-        why measured performance depends on the data and test conditions.
-      </p>
+      <p>My CS-300 Advising Assistance Program demonstrates how data structures and algorithms affect a solution. I added binary search alongside hash-table searching, compared their behavior, and measured repeated search operations. This helped me consider trade-offs instead of assuming one approach is always best. It also reinforced that measured performance depends on the data and test conditions, not only on theoretical time complexity.</p>
       <h3>Software Engineering and Data Integrity</h3>
-      <p>
-        I improved input handling and error reporting in my program and added
-        course-data validation. My internship has also reinforced that security
-        and integrity matter even when writing small scripts. Code can affect
-        important data and decisions, so results need to be trustworthy. I believe
-        it is important to speak up when something does not seem right, document
-        concerns honestly, and take responsibility rather than ignore a problem.
-      </p>
+      <p>In my CS-300 project, I improved input handling and error reporting and added course-data validation. My internship has also reinforced that security and integrity matter in everyday scripting and testing, not just in large applications. A small script can still affect important data or influence decisions, so I need to be careful about what it changes, how it handles information, and whether its results are trustworthy. I believe it is important to speak up when something does not seem right, document concerns honestly, and take responsibility rather than ignore a problem because it is uncomfortable or inconvenient.</p>
       <h3>Security Mindset</h3>
-      <p>
-        My code review taught me to look beyond basic functionality and consider
-        weaknesses in design, input handling, and sensitive information. I
-        understand that security should be considered throughout development,
-        not added as an afterthought.
-      </p>
-      <p>
-        Together, my coursework, internship, and independent projects show my
-        progress in collaboration, professional communication, algorithmic
-        problem-solving, computing practices, and security. I see this portfolio
-        as evidence of that progress and a foundation for continued growth.
-      </p>
-      <p class="links">
+      <p>My code review taught me to look beyond whether a program functions and consider weaknesses in its design, input handling, and treatment of sensitive information. In a professional environment, overlooking a problem or misrepresenting a result can have serious consequences for a team, a company, and the people who depend on the work. I want to be someone who asks questions when a result or practice seems wrong. Security and professional integrity are responsibilities throughout development, not afterthoughts.</p>
+      <h3>How My Work Meets the Program Outcomes</h3>
+      <p>My work supports collaboration by making technical results understandable and using feedback to improve projects. It supports professional communication through code review, documentation, and narratives that explain technical decisions. The algorithm enhancement demonstrates comparing data structures, searching methods, and performance trade-offs. The software engineering and database-focused enhancements show how I use appropriate tools, validation, testing, and error handling to improve a working solution. Finally, my code review and professional experience reinforce a security mindset and the importance of protecting data and reporting concerns honestly.</p>
+      <p>Together, my coursework, internship, and independent projects show my progress in collaboration, professional communication, algorithmic problem-solving, computing practices, and security. I see this portfolio as evidence of that progress and a foundation for continued growth.</p>
+      <div class="links">
         <a href="https://github.com/NicholasJustus">GitHub</a>
         <a href="https://sundaydrivegames.itch.io/">Sunday Drive Games</a>
         <a href="https://www.linkedin.com/in/nicholas-justus/">LinkedIn</a>
-      </p>
+      </div>
     </section>
 
     <section id="review">
       <h2>Code Review</h2>
-      <p>
-        My code review examined an existing project, identified areas for
-        improvement, and helped guide the enhancements presented in this portfolio.
-      </p>
-      <p><strong>Code review video:</strong> Link to be added.</p>
-      <p><strong>Original artifact:</strong> Link to be added.</p>
+      <p>My code review examined an existing project, identified areas for improvement, and helped guide the enhancements presented in this portfolio.</p>
+      <p class="notice">The code review video link still needs to be added here. The video itself should be hosted somewhere accessible, such as YouTube or another shareable location.</p>
+      <div class="links">
+        <a href="https://github.com/NicholasJustus/Data-Structures-Algorithms-Analysis-and-Design">CS-300 Original Project Repository</a>
+      </div>
     </section>
 
     <section id="software">
       <h2>Enhancement One: Software Design and Engineering</h2>
-      <p><strong>Artifact:</strong> CS-300 Advising Assistance Program (C++)</p>
-      <p>
-        This enhancement focused on input validation, error handling, and making
-        the program's behavior clearer when it encounters invalid input or file
-        problems.
-      </p>
-      <p><strong>Narrative:</strong> Link to be added.</p>
-      <p><strong>Enhanced code:</strong> Link to be added.</p>
+      <span class="pill">C++</span><span class="pill">Input Validation</span><span class="pill">Error Handling</span><span class="pill">Maintainability</span>
+      <p class="intro">This enhancement focused on making the Advising Assistance Program more reliable and easier to use without changing its core purpose.</p>
+      <p>I improved menu input validation, added clearer handling for empty file names and file-opening failures, checked for files with no valid course records, and improved feedback for empty or nonexistent course IDs. I also improved comments and parameter handling to make the code easier to maintain.</p>
+      <div class="links">
+        <a href="https://github.com/NicholasJustus/Data-Structures-Algorithms-Analysis-and-Design">Original CS-300 Repository</a>
+        <a href="https://github.com/NicholasJustus/Data-Structures-Algorithms-Analysis-and-Design/blob/main/ProjectTwo/ProjectTwo.cpp">Original C++ Source</a>
+      </div>
+      <details><summary>Read the enhancement narrative</summary>
+        <p><strong>Artifact and rationale.</strong> I originally created the CS-300 Advising Assistance Program for my Data Structures, Algorithms, and Design coursework. It is a C++ console application that loads course information from a CSV file, stores courses in a hash table, displays the course list in alphanumeric order, and lets a user search for a course and view its prerequisites. I continued with this artifact because I could run and test it locally.</p>
+        <p><strong>Changes made.</strong> I improved input validation and error handling throughout the program. It validates menu input before converting it to a number, handles invalid and out-of-range choices, checks for empty file names, reports file-opening failures clearly, detects files with no valid course records, and gives clearer feedback when a requested course does not exist or an empty course ID is entered. I also used const references where appropriate and added comments to improve maintainability.</p>
+        <p><strong>Skills and outcomes.</strong> This work demonstrates practical software engineering, debugging, testing, and computing practices. It improved the reliability, maintainability, and usability of the application while preserving its original data-structure functionality.</p>
+        <p><strong>Reflection.</strong> The enhancement reinforced the importance of testing beyond the normal successful path. I tested valid and invalid file names, successful course loading, invalid course searches, empty course IDs, invalid menu selections, and normal lookups. Getting the older project running in a current local environment was a challenge, but rebuilding and testing it step by step helped me work through those issues instead of assuming the code would work unchanged.</p>
+      </details>
     </section>
 
     <section id="algorithms">
       <h2>Enhancement Two: Algorithms and Data Structures</h2>
-      <p><strong>Artifact:</strong> CS-300 Advising Assistance Program (C++)</p>
-      <p>
-        This enhancement added binary search alongside hash-table searching,
-        algorithm comparison, time-complexity information, and performance testing.
-      </p>
-      <p><strong>Narrative:</strong> Link to be added.</p>
-      <p><strong>Enhanced code:</strong> Link to be added.</p>
+      <span class="pill">Hash Tables</span><span class="pill">Binary Search</span><span class="pill">Big-O</span><span class="pill">Performance Testing</span>
+      <p class="intro">This enhancement compares two ways to find a course and shows how algorithm choice affects performance and design.</p>
+      <p>I added a sorted vector and binary search alongside the original hash-table search, along with a comparison feature and a performance test that performs 100,000 search operations. The test used eight courses; both search methods found CSCI200. In that run, hash-table search took 10,723 microseconds and binary search took 26,299 microseconds. This is one test result, not a universal performance guarantee.</p>
+      <div class="links">
+        <a href="https://github.com/NicholasJustus/Data-Structures-Algorithms-Analysis-and-Design">CS-300 Project Repository</a>
+        <a href="https://github.com/NicholasJustus/Data-Structures-Algorithms-Analysis-and-Design/blob/main/ProjectTwo/ProjectTwo.cpp">Original C++ Source</a>
+      </div>
+      <details><summary>Read the enhancement narrative</summary>
+        <p><strong>Artifact and rationale.</strong> The CS-300 Advising Assistance Program loads course information from a CSV file, stores records in a hash table, sorts courses for display, and allows users to search for courses and view prerequisites. It demonstrates how data structures and algorithms can solve a practical problem.</p>
+        <p><strong>Changes made.</strong> I added a sorted vector and binary search so the program can compare two approaches to course lookup. I also added a search comparison feature and a performance test with 100,000 search operations. The program reports average O(1) for hash-table lookup, O(log n) for binary search, and O(n log n) for sorting.</p>
+        <p><strong>Testing and trade-offs.</strong> Both methods found CSCI200. The test used eight courses and measured 10,723 microseconds for hash-table search and 26,299 microseconds for binary search. This helped me see that theoretical complexity and measured runtime are related but not identical. Binary search requires sorted data, while the hash table provided faster lookup in this particular test.</p>
+        <p><strong>Reflection.</strong> I learned to evaluate the requirements and trade-offs of an algorithm instead of choosing one based only on Big-O notation. Keeping the original hash-table search and adding binary search separately allowed me to compare both methods while preserving the existing program. The enhanced program built successfully and completed the test.</p>
+      </details>
     </section>
 
     <section id="databases">
-      <h2>Enhancement Three: Databases</h2>
-      <p><strong>Artifact:</strong> CS-300 Advising Assistance Program (C++)</p>
-      <p>
-        This enhancement added course-data validation, including checks for
-        duplicate course IDs and prerequisites that are not present in the loaded
-        course records.
-      </p>
-      <p><strong>Narrative:</strong> Link to be added.</p>
-      <p><strong>Enhanced code:</strong> Link to be added.</p>
+      <h2>Enhancement Three: Databases and Data Integrity</h2>
+      <span class="pill">Data Validation</span><span class="pill">Duplicate Detection</span><span class="pill">Prerequisite Integrity</span>
+      <p class="intro">This enhancement focuses on checking that the course data is internally consistent before relying on it.</p>
+      <p>I added validation for duplicate course IDs and prerequisites that do not exist in the loaded course data. The existing eight-course data set passed these checks. I kept the earlier search comparison and performance testing features, building on the same artifact across all three categories.</p>
+      <div class="links">
+        <a href="https://github.com/NicholasJustus/Data-Structures-Algorithms-Analysis-and-Design">CS-300 Project Repository</a>
+        <a href="https://github.com/NicholasJustus/Data-Structures-Algorithms-Analysis-and-Design/blob/main/ProjectTwo/ProjectTwo.cpp">Original C++ Source</a>
+      </div>
+      <details><summary>Read the enhancement narrative</summary>
+        <p><strong>Artifact and rationale.</strong> I continued using the CS-300 Advising Assistance Program so I could build on one project instead of spreading the enhancements across several artifacts. The C++ program loads course data from a CSV file, stores courses in a hash table, and supports sorting and searching.</p>
+        <p><strong>Changes made.</strong> I added course-data validation to check for duplicate course IDs and prerequisites that do not exist in the loaded course data. I retained the search comparison and performance testing from the previous enhancement. Together, these changes help the program check the quality and integrity of its data.</p>
+        <p><strong>Testing and reflection.</strong> Testing the existing eight-course data set showed no duplicate IDs or invalid prerequisites, and the program reported that the data passed validation. One challenge was adding a database-focused improvement without making the project unnecessarily large or disrupting the existing search and performance features. This enhancement taught me that reliable software depends not only on how a program processes information, but also on checking the information it receives.</p>
+      </details>
+    </section>
+
+    <section>
+      <h2>Project Links</h2>
+      <p>These links provide access to my public work and professional projects.</p>
+      <div class="links">
+        <a href="https://github.com/NicholasJustus/Data-Structures-Algorithms-Analysis-and-Design">CS-300 Advising Assistance Program</a>
+        <a href="https://github.com/NicholasJustus/Rescue-Animal-Dashboard">Rescue Animal Dashboard</a>
+        <a href="https://sundaydrivegames.itch.io/">Sunday Drive Games</a>
+        <a href="https://github.com/NicholasJustus">GitHub Profile</a>
+        <a href="https://www.linkedin.com/in/nicholas-justus/">LinkedIn</a>
+      </div>
     </section>
   </main>
-
-  <footer>
-    <p>Nicholas Justus | CS 499 Computer Science Capstone</p>
-  </footer>
+  <footer><p>Nicholas Justus · CS 499 Computer Science Capstone</p></footer>
 </body>
 </html>
